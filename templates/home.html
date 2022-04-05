@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Werewolf</title>
+    <!-- IMPORT MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Personal Imports -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="">Rules</a>
+                    <a class="mdl-navigation__link" href="">Sign Up</a>
+                    <a class="mdl-navigation__link" href="">Log In</a>
+                </nav>
+            </div>
+        </header>
+        </div>
+        <main class="mdl-layout__content">
+
+            <!-- TITLE / HEADING -->
+            <div class="title">Ultimate<span class="title__emphasis">Werewolf</span></div>
+           
+            <!-- GAME SETUP -->
+            <div class="setup mdl-shadow--2dp">
+                <div class="setup__head">Setup</div>
+                <div class="setup__content">
+                    <div class="deck">
+                        <div class="deck__content">
+                            <ul class="cardlist"></ul>
+                            <div class="card__count">8/10</div>
+                        </div>
+                    </div>
+                    <div class="setup__settings">
+                        <div class="setup__time mdl-shadow--2dp">
+                            <label for="discussion-time" class="discussion-time__label">Discussion Time: </label>
+                            <input type="number" class="discussion-time" max="10", min="1" pattern="\d" id="discussion-time" maxlength="2" placeholder="5" disabled>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--2dp game-ready">
+                            Ready
+                        </button>
+                    </div>
+                </div>
+            </div>
+                   
+            <!-- CHATBOX -->
+            <div class="chatbox mdl-shadow--2dp">
+                <div class="chatbox__head">Chat</div>
+                <div class="chatbox__content">
+                    <div class="chatbox__content--read">
+                        <ul class="messagelist"></ul>
+                    </div>
+                    <div class="chatbox__content--write">
+                        <input type="text" class="chatbox__content--write-textfield" placeholder="Aa..." maxlength="240">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab chatbox__content--write-send">
+                            <i class="material-icons">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ROOM CODE -->
+            <div class="roomcode mdl-shadow--2dp">
+                <div class="roomcode__head">Room Code:</div>
+                <div class="roomcode__container">
+                    <input class="roomcode__code" type="password" disabled>
+                    <div class="roomcode__toggle">
+                        <span class="material-icons">visibility_off</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LOBBY -->
+            <div class="lobby mdl-shadow--2dp">
+                <div class="lobby__head">Lobby</div>
+                <div class="lobby__content">
+                    <ul class="lobby__content--memberlist"></ul>
+                    <span class="lobby__foot">1/10</span>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/game.js"> </script>
+</body>
+</html>

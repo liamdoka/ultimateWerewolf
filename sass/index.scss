@@ -1,0 +1,115 @@
+@import 'config', 'title';
+
+@mixin defaultTextbox {
+    text-align: center;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    font-size: 30px;        
+    color: $primary-text-color;
+    background-color: rgba($primary-text-color, 0.05);
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(25%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+body {
+    background-color: $primary-color;
+    color: $primary-text-color;
+    text-align: center;
+}
+
+.mdl-layout__content {
+    height: 90%;
+    width: 800px;
+}
+
+.container {
+    margin: 200px auto;
+    padding: 3rem;
+    border-radius: 20px;
+    width: 400px;
+    background-color: rgba($primary-text-color, 0.05);
+    animation: 800ms ease-out 0s 1 slideInFromBottom;
+}
+
+.form {
+    &__label {
+        color: $primary-accent-text-color;
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        gap: 5px;
+    }
+
+    &__nickname {
+        @include defaultTextbox();
+        width: 100%;
+        flex: 0 0 auto;
+
+        &::placeholder {
+            color: $secondary-accent-color;
+        }
+
+        &:focus {
+            outline: none;
+            background-color: rgba($primary-text-color, 0.08);
+        }
+    }
+
+    &__room {
+        @include defaultTextbox();
+        width: 50%;
+        flex: 1 0 auto;
+        text-transform: uppercase;
+
+        &::placeholder {
+            text-transform: none;
+            color: $secondary-accent-color;
+        }
+
+        &:focus {
+            outline: none;
+            background-color: rgba($primary-text-color, 0.08);
+        }
+    }
+
+    &__submit {
+        height: 50px !important;
+        min-width: 50px !important;
+        border-radius: 5px;
+        color: $primary-accent-text-color;
+        background-color: $primary-accent-color;
+        &:hover {
+            background-color: rgba($primary-accent-text-color, 0.3) !important;
+        }
+    }
+
+    &__create {
+        @extend .form__submit;
+        font-weight: bold;
+        display: block;
+        flex-grow: 1;
+        min-width: 200px;
+        font-family: inherit;
+        font-size: 30px;
+        text-transform: capitalize;
+        
+        &:hover {
+            background-color: rgba($primary-accent-text-color, 0.3) !important;
+        }
+    }
+}

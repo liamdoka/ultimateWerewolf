@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Werewolf</title>
+    <!-- IMPORT MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Personal Imports -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="">Rules</a>
+                    <a class="mdl-navigation__link" href="">Sign Up</a>
+                    <a class="mdl-navigation__link" href="">Log In</a>
+                </nav>
+            </div>
+        </header>
+        </div>
+        <main class="mdl-layout__content">
+            <!-- TITLE / HEADING -->
+            <div class="title">Ultimate<span class="title__emphasis">Werewolf</span></div>
+           
+            <!-- FORM BOX -->
+            <div class="container mdl-shadow--2dp">
+                <div class="form">
+                    <div class="form__label">JOIN A ROOM</div>
+                    <div class="form__flex">
+                        <input type="text" class="form__nickname" maxlength="8" id="username" placeholder="Nickname" autocomplete="off">
+                        <input type="text" class="form__room" maxlength="4" id="room" placeholder="Join Room" autocomplete="off">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab form__submit" onclick="joinGame()">
+                            <i class="material-icons">done</i>
+                        </button>
+                        <!-- Flat button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--2dp form__create" onclick="createGame()">
+                            Create Game
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

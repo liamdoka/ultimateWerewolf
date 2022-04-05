@@ -1,0 +1,154 @@
+.setup {
+    width: 800px;
+    margin: 0 auto;
+    height: 650px;
+    color: $primary-accent-text-color;
+    background-color: $background-layer-one;
+    
+    padding: 1rem;
+    border-radius: 15px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+
+    &__head {
+        user-select: none;
+        padding-bottom: 1rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    &__content {
+        flex-shrink: 1;
+        border-radius: 10px;
+        padding: 5px;
+        height: 100%;
+        background-color: rgba($primary-text-color, 0.05);
+        color: $primary-text-color;
+        overflow: hidden;
+    }
+
+    &__settings {
+        padding: 1rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__time {
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: rgba($primary-text-color, 0.05);
+    }
+}
+
+.deck {
+    padding: 10px;
+
+    &__title {
+        margin-bottom: 5px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    &__content {
+        overflow: auto;
+    }
+}
+
+.cardlist {
+    list-style-type: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card {
+    user-select: none;
+
+    background-color: rgba($primary-text-color, 0.05);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+
+    &__image {
+        height: 100px;
+        width: 100px;
+    }
+
+    &__name {
+        margin: 5px;
+        font-weight: bold;
+    }
+}
+
+.not-selected {
+    opacity: 0.3 !important;
+}
+
+.discussion-time {
+    max-width: 80px;
+    text-align: center;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;        
+    color: $primary-text-color;
+    background-color: rgba($primary-text-color, 0.05);
+
+    &__label {
+        color: $primary-accent-text-color;
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
+
+.game-ready {        
+
+    padding: 1rem;
+    height: calc(50px + 2rem) !important;
+
+    border-radius: 10px;
+    color: $primary-accent-text-color;
+    background-color: $primary-accent-color;
+    display: block;
+    flex-grow: 1;
+    min-width: 200px;
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    border: none;
+    
+    &:hover {
+        background-color: rgba($primary-accent-text-color, 0.3) !important;
+    }
+}
+
+.card__count {
+    border-radius: 10px;
+    position: absolute;
+    width: 100px;
+    padding: 1rem;
+    background-color: rgba($primary-text-color, 0.05);
+    font-weight: bold;
+    right: 6rem;
+    bottom: 14rem;
+}
+
+.game-ready__waiting {
+    background-color: green !important;
+    color: $primary-text-color;
+    
+    &:hover {
+        background-color: rgba(green, 0.8) !important
+    }
+}

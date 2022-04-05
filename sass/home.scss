@@ -1,0 +1,7 @@
+@import 'config', 'chatbox', 'title', 'lobby', 'roomcode', 'setup', 'game';
+
+body {
+    background-color: $primary-color;
+    color: $primary-text-color;
+    text-align: center;
+}

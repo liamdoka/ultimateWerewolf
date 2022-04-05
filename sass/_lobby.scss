@@ -1,0 +1,91 @@
+.lobby {
+
+    background-color: $background-layer-one;
+    color: $primary-accent-text-color;
+    
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+    height: 50%;
+    width: 20%;
+    min-height: 300px;
+    min-width: 350px;
+    
+    padding: 1rem;
+    position: fixed;
+    left: 2rem;
+    bottom: 0;
+
+    &__head {
+        user-select: none;
+        padding-bottom: 1rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column nowrap;
+        
+        border-radius: 10px;
+        padding: 5px;
+        height: 100%;
+        background-color: rgba($primary-text-color, 0.05);
+        color: $primary-text-color;
+
+        &--memberlist {
+            flex-grow: 1;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            list-style-type: none;
+            gap: 5px;
+        }
+    }
+
+    &__foot{
+        font-size: 20px;
+        margin: 10px;
+        height: 50px;
+        font-weight: bold;
+    }
+}
+
+.member {
+    margin: 5px 0;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    height: 60px;
+    font-size: 24px;
+    padding: 8px;
+
+    border-radius: 10px;
+    color: $primary-text-color;
+
+    width: 120px;
+
+    &__status {
+        width: 40px;
+        height: 40px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $primary-accent-text-color;
+    }
+
+    &__nickname {
+        text-align:right;
+    }
+
+    &:hover {
+        transition: ease-in-out 0.1s;
+        background-color: rgba($primary-text-color, 0.05);
+    }
+}

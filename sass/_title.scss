@@ -1,0 +1,12 @@
+.title {
+    user-select: none;
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+    font-weight: bold;
+    font-size: 70px;
+
+    &__emphasis {
+        font-weight: bolder;
+        font-style: italic;
+    }
+}
